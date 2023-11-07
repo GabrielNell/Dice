@@ -1,29 +1,19 @@
-void setup()
-{
-	noLoop();
+Die aDie; 
+int rows = 4;
+int columns = 5;
+int total = 0;
+int mult = 100;
+int off;
+
+void setup() {
+  aDie = new Die();
+  noLoop();
+  size(600, 500);
+  off = (mult/2)+(mult-aDie.wid)/2;
+  textSize(20);
 }
-void draw()
-{
-	//your code here
-}
-void mousePressed()
-{
-	redraw();
-}
-class Die //models one single dice cube
-{
-	//variable declarations here
-	
-	Die(int x, int y) //constructor
-	{
-		//variable initializations here
-	}
-	void roll()
-	{
-		//your code here
-	}
-	void show()
-	{
-		//your code here
-	}
+
+void draw() {
+  aDie.show();
+  text("total: " + total, width/2-35, height-20);
 }
