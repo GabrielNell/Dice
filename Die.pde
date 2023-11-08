@@ -1,11 +1,8 @@
 class Die {
   int faces, current, r, g, b, a;
   int wid, hgt;
-  Die() {
+  Die() { // constructor
     faces = 6;
-    r = (int)(Math.random() * 256);
-    g = (int)(Math.random() * 256);
-    b = (int)(Math.random() * 256);
     a = 80;
     current = 0;
     wid = 80;
@@ -23,8 +20,12 @@ class Die {
   void show() {
     for (int y = 0; y < rows; y++) {
       for (int x = 0; x < columns; x++) {
+        r = (int)(Math.random() * 256);
+        g = (int)(Math.random() * 256);
+        b = (int)(Math.random() * 256);
         current = roll();
-        total += aDie.current;
+        total += current;
+        trueTotal += current;
         fill(r, g, b, a);
         rect(x*mult+off, y*mult+off, wid, hgt, 20);
         if (current == 1) {
@@ -43,7 +44,7 @@ class Die {
       }
     }
   }
-  // pips!
+  // pip designs!
   void show1(int x1, int y1) {
     fill(0, 0, 0, 255);
     ellipse(x1*mult+off+wid/2, y1*mult+off+hgt/2, wid/5, hgt/5);
@@ -76,5 +77,4 @@ class Die {
     ellipse(x6*mult+off+3*wid/4, y6*mult+off+hgt/2, wid/5, hgt/5);
     ellipse(x6*mult+off+wid/4, y6*mult+off+hgt/2, wid/5, hgt/5);
   }
-  
 }
