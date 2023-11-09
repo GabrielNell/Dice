@@ -15,11 +15,11 @@ void setup() {
   background(255);
   off = (mult/2)+(mult-aDie.wid)/2;
   textSize(20);
-  frameRate(180); // change this if you want, also doesn't do a whole lot when the dice are rolled on mouse click
+  frameRate(5); // change this if you want, also doesn't do a whole lot when the dice are rolled on mouse click
 }
 
 void draw() { // delete the comment thingies if you want this to loop a while to test average or just watch the animation
-  /*
+  
   background(255);
   aDie.show();
   rolls += 1;
@@ -34,10 +34,11 @@ void draw() { // delete the comment thingies if you want this to loop a while to
   text("avg: " + avg, 3*width/5 - 30, height-20);
   text("best: " + best, 4*width/5 - 30, height-20);
   total = 0;
-  */
+  
 }
 
 void mouseClicked() { // roll dice when click mouse
+/*
   background(255);
   aDie.show();
   rolls += 1;
@@ -52,4 +53,5 @@ void mouseClicked() { // roll dice when click mouse
   text("avg: " + avg, 3*width/5 - 30, height-20);
   text("best: " + best, 4*width/5 - 30, height-20);
   total = 0;
+*/
 }
