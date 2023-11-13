@@ -9,7 +9,7 @@ float avg; // globals
 
 void setup() {
   aDie = new Die();
-  windowResize(800, 600);
+  size(800, 600);
   rows = (int)((height - 100) / 100);
   columns = (int)((width - 100) / 100); // rows & cols based on width & height
   background(255);
